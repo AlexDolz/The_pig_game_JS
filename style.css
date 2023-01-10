@@ -169,3 +169,36 @@ main {
 .hidden {
   display: none;
 }
+
+@media (orientation: portrait) and (hover: none) and (pointer: coarse) {
+  main {
+    display: none;
+  }
+  body::after {
+    content: 'Sorry, the game runs only on desktop';
+    text-align: center;
+    font-size: 72px;
+    color: yellow;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Anton', sans-serif;
+  }
+}
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+  main {
+    display: none;
+  }
+  body::after {
+    content: 'Sorry, the game runs only on desktop';
+    text-align: center;
+    font-size: 60px;
+    color: yellow;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Anton', sans-serif;
+  }
+}
